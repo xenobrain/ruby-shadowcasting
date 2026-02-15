@@ -68,7 +68,8 @@ def cast_light(grid, grid_w, grid_h, cx, cy, radius, radius2, visible_tiles,
     end
 
     idx = my * grid_w + mx
-    visible_tiles[idx] = 1
+    # Uncomment the line below if you don't want to see walls
+    visible_tiles[idx] = 1 # unless grid[idx] == 1
 
     is_wall = grid[idx] == 1
 
